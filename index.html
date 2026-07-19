@@ -979,16 +979,23 @@
     </p>
    <div class="video-container reveal" style="aspect-ratio: 9/16; max-width: 400px;">
   <video
+    id="demo-video"
     controls
-    autoplay
     muted
     loop
     playsinline
+    preload="none"
+    poster="/video/demo-poster.jpg"
     style="position: absolute; inset: 0; width: 100%; height: 100%; border: none; object-fit: contain; background: #000;"
   >
     <source src="/video/sitescript-demo.mp4" type="video/mp4">
   </video>
 </div>
+<script>
+  document.getElementById('demo-video').addEventListener('click', function () {
+    if (this.paused) this.play();
+  });
+</script>
 </section>
  
 <!-- ══ FEATURES ══ -->
