@@ -7,12 +7,24 @@
   <meta name="description" content="SiteScript turns your spoken job notes into professional quotes in seconds. Built for UK tradespeople — plumbers, builders, electricians, bathroom fitters. Stop writing quotes at 9pm." />
   <meta name="keywords" content="quoting app for tradesmen UK, invoice app for builders UK, voice to quote app trades, quoting app for plumbers, quoting app for electricians, job estimating app UK" />
  
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/sitescript-compass-192.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="SiteScript | Voice-to-Quote for UK Tradespeople" />
   <meta property="og:description" content="Speak your job. Get a professional quote. Done before you leave the site." />
   <meta property="og:url" content="https://www.sitescript.app" />
   <meta property="og:type" content="website" />
- 
+  <meta property="og:image" content="https://www.sitescript.app/og-image.png" />
+  <meta property="og:image:alt" content="SiteScript compass logo" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SiteScript | Voice-to-Quote for UK Tradespeople" />
+  <meta name="twitter:description" content="Speak your job. Get a professional quote. Done before you leave the site." />
+  <meta name="twitter:image" content="https://www.sitescript.app/og-image.png" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -182,7 +194,42 @@
       max-width: 480px;
     }
  
-    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
+    .hero-login-link {
+      color: var(--text-dim);
+      font-family: var(--font-head);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .hero-login-link:hover { color: var(--white); }
+    .trial-renew-note {
+      text-align: center;
+      margin: -24px auto 40px;
+      max-width: 520px;
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+    #founder {
+      background: var(--slate);
+      border-top: 1px solid rgba(255,115,0,0.15);
+      border-bottom: 1px solid rgba(255,115,0,0.15);
+      padding: 56px 24px;
+    }
+    .founder-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .founder-inner p {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.45;
+    }
  
     /* ── FREE QUOTE HOOK ── */
     .hero-free-hook {
@@ -814,7 +861,8 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#pricing-strip">Pricing</a></li>
     <li><a href="#faq-strip">FAQ</a></li>
-    <li><a href="https://app.sitescript.app/login" class="nav-cta">Get Started</a></li>
+    <li><a href="https://app.sitescript.app/login" style="color:var(--text-dim);font-weight:600;margin-right:12px;">Log in</a></li>
+    <li><a href="https://app.sitescript.app/onboarding-1" class="nav-cta">Start your free 7-day trial</a></li>
   </ul>
   <button class="hamburger" aria-label="Menu">
     <span class="material-symbols-outlined">menu</span>
@@ -837,19 +885,20 @@
         No typing. No spreadsheets. No more writing quotes at 9pm.
       </p>
       <div class="hero-ctas">
-        <a href="https://app.sitescript.app/login" class="btn-primary">
+        <a href="https://app.sitescript.app/onboarding-1" class="btn-primary">
           <span class="material-symbols-outlined">arrow_forward</span>
-          Get Started Today
+          Start your free 7-day trial
         </a>
         <a href="#demo" class="btn-secondary">
           <span class="material-symbols-outlined">play_circle</span>
           Watch the Demo
         </a>
+        <a href="https://app.sitescript.app/login" class="hero-login-link">Log in</a>
       </div>
-      <!-- FREE QUOTE HOOK -->
+      <!-- FREE TRIAL HOOK -->
       <div class="hero-free-hook">
         <span class="material-symbols-outlined">check_circle</span>
-        <span><strong>Try Free For 7 Days</strong> — cancel anytime</span>
+        <span><strong>Free for 7 days, then £10/month.</strong> Cancel anytime.</span>
       </div>
       <div class="hero-stats">
         <div>
@@ -1024,8 +1073,8 @@
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon"><span class="material-symbols-outlined">store</span></div>
-        <h3>Material Price Library</h3>
-        <p>Save your common materials with your own prices. Pull them into quotes without typing the same thing twice.</p>
+        <h3>Live UK Prices</h3>
+        <p>Quotes pull current UK merchant prices from real suppliers — not last year's list. On Solo and Pro.</p>
       </div>
       <div class="feature-card reveal">
         <div class="feature-icon"><span class="material-symbols-outlined">group</span></div>
@@ -1054,8 +1103,11 @@
     <p class="section-sub" style="text-align:center; margin:0 auto 16px;">
       Pick the plan that fits how many jobs you're quoting. Change any time.
     </p>
-    <p style="text-align:center; margin:0 auto 48px; font-family:var(--font-head); font-size:14px; font-weight:600; color:var(--orange);">
-      ✓ 7-day free trial on Pro — cancel anytime
+    <p style="text-align:center; margin:0 auto 16px; font-family:var(--font-head); font-size:14px; font-weight:600; color:var(--orange);">
+      ✓ Free for 7 days, then £10/month. Cancel anytime.
+    </p>
+    <p class="trial-renew-note">
+      Card taken at checkout. After 7 days the Solo trial renews at £10/month unless you cancel. All prices exclude VAT.
     </p>
     <div class="pricing-cards">
       <div class="pricing-card reveal">
@@ -1065,11 +1117,11 @@
         <ul class="pricing-features">
           <li><span class="material-symbols-outlined">check</span> 10 AI voice quotes per month</li>
           <li><span class="material-symbols-outlined">check</span> Professional PDF output</li>
-          <li><span class="material-symbols-outlined">check</span> Manual price entry</li>
+          <li><span class="material-symbols-outlined">check</span> Live UK merchant prices</li>
           <li><span class="material-symbols-outlined">check</span> Client management</li>
           <li><span class="material-symbols-outlined">check</span> Standard email support</li>
         </ul>
-        <a href="https://app.sitescript.app/login" class="btn-secondary" style="display:flex; justify-content:center;">Get Started</a>
+        <a href="https://app.sitescript.app/login?next=%2Fcheckout-payment%3Fplan%3Dsolo" class="btn-secondary" style="display:flex; justify-content:center;">Start your free 7-day trial</a>
       </div>
       <div class="pricing-card featured reveal">
         <div class="pricing-badge">Most Popular</div>
@@ -1080,12 +1132,13 @@
           <li><span class="material-symbols-outlined">check</span> Unlimited voice quotes</li>
           <li><span class="material-symbols-outlined">check</span> Branded PDFs (logo + colours)</li>
           <li><span class="material-symbols-outlined">check</span> Full invoice management</li>
+          <li><span class="material-symbols-outlined">check</span> Live UK merchant prices</li>
           <li><span class="material-symbols-outlined">check</span> Material price library</li>
           <li><span class="material-symbols-outlined">check</span> Analytics dashboard</li>
           <li><span class="material-symbols-outlined">check</span> SiteScript Office missed-call job briefs</li>
           <li><span class="material-symbols-outlined">check</span> Priority support</li>
         </ul>
-        <a href="https://app.sitescript.app/login" class="btn-primary" style="display:flex; justify-content:center;">Get Started</a>
+        <a href="https://app.sitescript.app/login?next=%2Fcheckout-payment%3Fplan%3Dpro" class="btn-primary" style="display:flex; justify-content:center;">Get Pro</a>
       </div>
     </div>
     <p style="text-align:center; margin-top:32px; font-size:13px; color:var(--text-dim);">
@@ -1094,28 +1147,10 @@
   </div>
 </section>
  
-<!-- ══ PROOF ══ -->
-<section id="proof">
-  <div class="section-inner">
-    <div class="section-label">What Tradespeople Say</div>
-    <h2 style="margin-bottom:48px;">Straight from <em>the tools</em></h2>
-    <div class="testimonials">
-      <div class="testimonial reveal">
-        <p class="testimonial-text">"I was writing quotes on spreadsheets at half nine every night. Now I'm done by the time I'm back in the van. Honestly can't believe it took this long to exist."</p>
-        <div class="testimonial-author">Dave M.</div>
-        <div class="testimonial-trade">Bathroom Fitter — Leeds</div>
-      </div>
-      <div class="testimonial reveal">
-        <p class="testimonial-text">"The quotes look so much more professional than what I was sending before. I've had customers comment on it. That's not nothing when you're trying to win a job."</p>
-        <div class="testimonial-author">Steve H.</div>
-        <div class="testimonial-trade">Electrician — Manchester</div>
-      </div>
-      <div class="testimonial reveal">
-        <p class="testimonial-text">"I talked the job on the way back to the yard and the quote was ready before I got home. First time I've sent a quote the same day in 12 years. Proper tool."</p>
-        <div class="testimonial-author">Chris B.</div>
-        <div class="testimonial-trade">Plumber — Birmingham</div>
-      </div>
-    </div>
+<!-- ══ FOUNDER ══ -->
+<section id="founder">
+  <div class="founder-inner reveal">
+    <p>Built by Neil, a Leeds builder with 30 years on the tools, to stop quoting at 9pm.</p>
   </div>
 </section>
  
@@ -1158,7 +1193,7 @@
           <span class="material-symbols-outlined">add</span>
         </button>
         <div class="faq-a">
-          <p>Solo is £10/month and gives you 10 voice quotes per month — ideal if you're just starting out or doing a smaller volume of jobs. Pro is £45/month and gives you unlimited quotes, branded PDFs, invoice management, analytics, SiteScript Office (missed calls turned into job briefs), and priority support.</p>
+          <p>Solo is free for 7 days, then £10/month, with 10 voice quotes per month and live UK merchant prices — ideal if you're just starting out or doing a smaller volume of jobs. Pro is £45/month from day one and gives you unlimited quotes, branded PDFs, invoice management, analytics, SiteScript Office (missed calls turned into job briefs), and priority support.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -1167,7 +1202,7 @@
           <span class="material-symbols-outlined">add</span>
         </button>
         <div class="faq-a">
-          <p>Yes. No contracts, no lock-ins. Cancel from your account settings any time and you won't be charged again. You keep access until the end of your current billing period.</p>
+          <p>Yes. No contracts, no lock-ins. Cancel from Business Settings any time and you won't be charged again. You keep access until the end of your current billing period. The Solo trial takes a card at checkout and renews at £10/month after 7 days unless you cancel.</p>
         </div>
       </div>
       <div class="faq-item">
@@ -1188,11 +1223,12 @@
   <div class="cta-inner">
     <h2>Stop writing quotes at 9pm.</h2>
     <p>Speak the job. Send the quote. Get paid faster.</p>
-    <p class="cta-free-note">Try SiteScript free for 7 days. No commitment — cancel anytime.</p>
-    <a href="https://app.sitescript.app/login" class="btn-dark">
+    <p class="cta-free-note">Free for 7 days, then £10/month. Cancel anytime.</p>
+    <a href="https://app.sitescript.app/onboarding-1" class="btn-dark">
       <span class="material-symbols-outlined">arrow_forward</span>
-      Start Quoting Today
+      Start your free 7-day trial
     </a>
+    <p style="margin-top:16px;"><a href="https://app.sitescript.app/login" class="hero-login-link" style="color:inherit;">Already have an account? Log in</a></p>
   </div>
 </section>
  
